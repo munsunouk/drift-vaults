@@ -131,7 +131,7 @@ export const managerUpdateVault = async (program: Command, cmdOpts: OptionValues
     let done = false;
     while (!done) {
         try {
-            const tx = await driftVault.managerUpdateVault(vaultAddress, newParams, preIxs, { maxRetries: 0 });
+            const tx = await driftVault.managerUpdateVault(vaultAddress, newParams);
             console.log(`Updated vault params as vault manager: https://solana.fm/tx/${tx}`);
             done = true;
             break;
